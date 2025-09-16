@@ -1,0 +1,17 @@
+#about {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    text-align: center;
+    min-height: 70vh;
+
+    & h1 {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    & p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}

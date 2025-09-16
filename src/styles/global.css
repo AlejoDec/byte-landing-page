@@ -1,0 +1,251 @@
+/* Global styles — modern, elegant restaurant theme (dark navy + yellow + deep red) */
+:root {
+    /* Color palette */
+    --bg: #071026; /* deep navy background */
+    --surface: #0f1b2b; /* card surface */
+    --muted-surface: #0b1624; /* subtle panels */
+    --text: #f3f5f7; /* near-white for text */
+    --muted-text: #b9c6d6; /* muted light blue */
+    --accent: #f2c94c; /* warm elegant yellow */
+    --accent-600: #d4a81f; /* darker yellow */
+    --accent-100: rgba(242,201,76,0.08);
+    --danger: #8b1f2d; /* deep red for highlights */
+    --glass: rgba(255,255,255,0.04);
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 6px 24px rgba(2,6,23,0.6);
+    --shadow-md: 0 14px 44px rgba(2,6,23,0.65);
+}
+
+/* Reset / sensible defaults */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+}
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    background: radial-gradient(1200px 400px at 10% 10%, rgba(242,201,76,0.03), transparent 10%), linear-gradient(180deg, var(--bg) 0%, #071227 100%);
+    color: var(--text);
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+}
+
+/* Typography */
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    color: var(--text);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.15;
+}
+h1 { font-size: 2.6rem; letter-spacing: 1px; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.25rem; }
+p { margin: 0 0 1rem 0; color: var(--muted-text); }
+
+/* Layout helpers */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.stack { display: flex; flex-direction: column; gap: 1rem; }
+.row { display: flex; gap: 1rem; }
+
+/* Navigation */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+#navbar img { height: 48px; width: auto; object-fit: contain; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
+#navbar ul { list-style: none; display: flex; gap: 0.75rem; align-items: center; margin: 0; }
+#navbar a { text-decoration: none; color: var(--text); padding: 0.5rem 0.75rem; border-radius: 999px; font-weight: 600; }
+#navbar a:hover { background: var(--accent-100); color: var(--accent-600); }
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms;
+}
+.btn-primary {
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-600) 100%);
+    color: #081024;
+    box-shadow: 0 10px 30px rgba(210,168,31,0.18);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 48px rgba(210,168,31,0.12); }
+.btn-ghost { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.03); padding: 0.5rem 0.9rem; }
+
+/* Cards / surfaces */
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.03);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Footer */
+#footer {
+    padding: 1.25rem 1rem;
+    text-align: center;
+    background: transparent;
+    color: var(--muted-text);
+    font-size: 0.95rem;
+}
+
+/* Lists and features */
+ul { margin: 0 0 1rem 1.25rem; }
+li { margin-bottom: 0.5rem; }
+.feature-list { display: grid; gap: 1rem; grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) ); }
+.feature-item { display:flex; gap:0.75rem; align-items:flex-start; }
+.feature-icon { font-size: 1.3rem; margin-top: 0.15rem; color: var(--danger); }
+
+/* Forms */
+input, textarea, select, button { font-family: inherit; }
+input, textarea, select { padding: 0.6rem 0.75rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.04); background: var(--muted-surface); color: var(--text); }
+
+/* Utility classes */
+.muted { color: var(--muted-text); }
+.accent { color: var(--accent); }
+.center { text-align: center; }
+.warning { color: var(--danger); }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+    h1 { font-size: 1.9rem; }
+    .container { padding-left: 0.75rem; padding-right: 0.75rem; }
+    #navbar img { height: 40px; }
+}
+
+/* Component-specific globals (dark theme adjustments) */
+#hero { padding-top: 4rem; padding-bottom: 4rem; display:flex; align-items:center; justify-content:center; }
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64vh;
+    padding: 2rem 1rem;
+}
+.hero-content {
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding: 2.25rem 2rem;
+    border-radius: calc(var(--radius-lg) + 4px);
+    box-shadow: var(--shadow-md);
+    max-width: 760px;
+    margin: 0 auto;
+    border: 1px solid rgba(242,201,76,0.06);
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    letter-spacing: 2px;
+}
+.hero-description {
+    font-size: 1.05rem;
+    color: var(--muted-text);
+    line-height: 1.6;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-600) 100%);
+    color: #081024;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(210,168,31,0.18);
+    text-decoration: none;
+    transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+#info1 {
+    background: transparent;
+    padding: 2rem 1.5rem;
+}
+#info1 .info-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    padding: 1.75rem;
+    border-radius: var(--radius-md);
+    max-width: 720px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-sm);
+    font-family: inherit;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+#info1 h2 {
+    color: var(--text);
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+#info1 ul {
+    margin: 0 0 1rem 1.5rem;
+    padding: 0;
+    color: var(--muted-text);
+    font-size: 1.05rem;
+}
+#info1 .note { color: var(--muted-text); font-size: 1rem; margin-top: 1rem; }
+
+#caracteristicas {
+    background: transparent;
+    padding: 2rem 1rem;
+}
+#caracteristicas .caracteristicas-card {
+    max-width: 980px;
+    margin: 0 auto;
+}
+#caracteristicas h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; color: var(--text); font-weight: 700; }
+.caracteristicas-list { list-style: none; padding: 0; margin: 0; display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.caracteristica-item { display:flex; align-items:flex-start; gap:1rem; background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); border-radius: 0.7rem; padding:1rem; box-shadow: var(--shadow-sm); transition: box-shadow 0.2s, transform 160ms; }
+.caracteristica-item:hover { box-shadow: var(--shadow-md); transform: translateY(-6px); }
+.caracteristica-icon { font-size: 1.7rem; margin-top: 0.1rem; color: var(--accent-600); }
+.caracteristica-title { font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
+.caracteristica-desc { color: var(--muted-text); font-size: 1rem; }
+
+#beneficios { background: transparent; padding: 2rem 1rem; }
+#beneficios .beneficios-card { max-width: 720px; margin: 0 auto; background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(255,255,255,0.03); }
+#beneficios h2 { font-size: 1.7rem; margin-bottom: 1.2rem; color: var(--text); display:flex; align-items:center; gap:0.5rem; }
+#beneficios ul { list-style: disc inside; color: var(--muted-text); font-size: 1.05rem; line-height: 1.7; padding-left: 0; }
+
+/* Small utility for red accents */
+.text-danger { color: var(--danger); font-weight: 600; }
+
+/* End of component-specific globals */
