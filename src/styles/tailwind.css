@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+:root {
+  --primary: #581845;
+  --secondary: #35524A;
+  --accent: #E6AF2E;
+}
+
+html,body {
+  height: 100%;
+}
+body {
+  @apply bg-primary/5 text-gray-900 font-sans;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up { animation: fadeInUp 600ms ease both; }

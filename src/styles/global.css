@@ -1,7 +1,7 @@
 /* Global styles — modern, elegant restaurant theme (dark navy + yellow + deep red) */
 :root {
     /* Color palette */
-    --bg: #071026; /* deep navy background */
+    --bg: #581845; /* deep navy background */
     --surface: #0f1b2b; /* card surface */
     --muted-surface: #0b1624; /* subtle panels */
     --text: #f3f5f7; /* near-white for text */
@@ -25,17 +25,13 @@
 *::after {
     box-sizing: border-box;
 }
-html,body {
-    height: 100%;
-}
 html {
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
 }
 body {
     margin: 0;
-    background: radial-gradient(1200px 400px at 10% 10%, rgba(242,201,76,0.03), transparent 10%), linear-gradient(180deg, var(--bg) 0%, #071227 100%);
+    background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 60%, var(--danger) 100%);
     color: var(--text);
     font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

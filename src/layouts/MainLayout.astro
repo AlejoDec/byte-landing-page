@@ -1,0 +1,14 @@
+---
+const { children } = Astro.props;
+---
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/tailwind.css">
+    <title>Byte — ERP para restaurantes</title>
+  </head>
+  <body class="min-h-screen bg-primary/5 text-gray-900">
+    {children}
+  </body>
+</html>
