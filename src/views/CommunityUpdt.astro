@@ -13,7 +13,7 @@
             <div class="container">
                 <h3>Beneficio 1</h3>
                 <div class="button-container">
-                    <button>Unirse</button>
+                    <a href="#">Unirse</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <div class="container">
                 <h3>Beneficio 2</h3>
                 <div class="button-container">
-                    <button>Unirse</button>
+                    <a href="#">Unirse</a>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="container">
                 <h3>Beneficio 3</h3>
                 <div class="button-container">
-                    <button>Unirse</button>
+                    <a href="#">Unirse</a>
                 </div>
             </div>
         </div>
@@ -77,12 +77,12 @@
             padding: 0 144px;
             justify-content: space-between;
             align-items: center;
+            gap: 24px;
 
             & .card {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: -96px;
 
                 & .rectangule {
                     border-radius: 8px;
@@ -97,6 +97,12 @@
                     flex-direction: column;
                     align-items: center;
                     gap: 16px;
+                    background: var(--Fondo-secundario, #F4E2AA);
+                    position: relative;
+                    z-index: 1;
+                    margin-top: -70px;
+                    width: 335px;
+                    border-radius: 21px;
 
                     & h3 {
                         color: var(--Texto-Secundario, #7D7D7D);
@@ -115,11 +121,14 @@
                         gap: 8px;
                         align-self: stretch;
 
-                        color: var(--Principal, #581845);
-                        font-size: 20px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 28px; /* 140% */
+                        & a {
+                            color: var(--Principal, #581845);
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 28px; /* 140% */
+                            text-decoration: none;
+                        }
                     }
                 }
             }

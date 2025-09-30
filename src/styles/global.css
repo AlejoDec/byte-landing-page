@@ -38,6 +38,9 @@ body {
     line-height: 1.6;
     letter-spacing: 0.2px;
     gap: 16px;
+    background: var(--Fondo, #FAF3E0);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Typography */
@@ -86,15 +89,6 @@ p { margin: 0 0 1rem 0; color: var(--muted-text); }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 48px rgba(210,168,31,0.12); }
 .btn-ghost { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.03); padding: 0.5rem 0.9rem; }
 
-/* Cards / surfaces */
-.card {
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border: 1px solid rgba(255,255,255,0.03);
-    border-radius: var(--radius-md);
-    padding: 1.25rem;
-    box-shadow: var(--shadow-sm);
-}
-
 /* Footer */
 #footer {
     padding: 1.25rem 1rem;
@@ -120,109 +114,3 @@ input, textarea, select { padding: 0.6rem 0.75rem; border-radius: 10px; border: 
 .accent { color: var(--accent); }
 .center { text-align: center; }
 .warning { color: var(--danger); }
-
-/* Responsive tweaks */
-@media (max-width: 640px) {
-    h1 { font-size: 1.9rem; }
-    .container { padding-left: 0.75rem; padding-right: 0.75rem; }
-    #navbar img { height: 40px; }
-}
-
-/* Component-specific globals (dark theme adjustments) */
-#hero { padding-top: 4rem; padding-bottom: 4rem; display:flex; align-items:center; justify-content:center; }
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 64vh;
-    padding: 2rem 1rem;
-}
-.hero-content {
-    text-align: center;
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    padding: 2.25rem 2rem;
-    border-radius: calc(var(--radius-lg) + 4px);
-    box-shadow: var(--shadow-md);
-    max-width: 760px;
-    margin: 0 auto;
-    border: 1px solid rgba(242,201,76,0.06);
-}
-.hero-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--accent);
-    margin-bottom: 0.6rem;
-    letter-spacing: 2px;
-}
-.hero-description {
-    font-size: 1.05rem;
-    color: var(--muted-text);
-    line-height: 1.6;
-}
-
-.hero-button {
-    display: inline-block;
-    margin-top: 1.5rem;
-    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-600) 100%);
-    color: #081024;
-    padding: 0.75rem 1.5rem;
-    border-radius: 999px;
-    font-weight: 600;
-    box-shadow: 0 10px 30px rgba(210,168,31,0.18);
-    text-decoration: none;
-    transition: transform 140ms ease, box-shadow 140ms ease;
-}
-
-#info1 {
-    background: transparent;
-    padding: 2rem 1.5rem;
-}
-#info1 .info-card {
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-    padding: 1.75rem;
-    border-radius: var(--radius-md);
-    max-width: 720px;
-    margin: 0 auto;
-    box-shadow: var(--shadow-sm);
-    font-family: inherit;
-    border: 1px solid rgba(255,255,255,0.03);
-}
-#info1 h2 {
-    color: var(--text);
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-#info1 ul {
-    margin: 0 0 1rem 1.5rem;
-    padding: 0;
-    color: var(--muted-text);
-    font-size: 1.05rem;
-}
-#info1 .note { color: var(--muted-text); font-size: 1rem; margin-top: 1rem; }
-
-#caracteristicas {
-    background: transparent;
-    padding: 2rem 1rem;
-}
-#caracteristicas .caracteristicas-card {
-    max-width: 980px;
-    margin: 0 auto;
-}
-#caracteristicas h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; color: var(--text); font-weight: 700; }
-.caracteristicas-list { list-style: none; padding: 0; margin: 0; display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.caracteristica-item { display:flex; align-items:flex-start; gap:1rem; background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); border-radius: 0.7rem; padding:1rem; box-shadow: var(--shadow-sm); transition: box-shadow 0.2s, transform 160ms; }
-.caracteristica-item:hover { box-shadow: var(--shadow-md); transform: translateY(-6px); }
-.caracteristica-icon { font-size: 1.7rem; margin-top: 0.1rem; color: var(--accent-600); }
-.caracteristica-title { font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
-.caracteristica-desc { color: var(--muted-text); font-size: 1rem; }
-
-#beneficios { background: transparent; padding: 2rem 1rem; }
-#beneficios .beneficios-card { max-width: 720px; margin: 0 auto; background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(255,255,255,0.03); }
-#beneficios h2 { font-size: 1.7rem; margin-bottom: 1.2rem; color: var(--text); display:flex; align-items:center; gap:0.5rem; }
-#beneficios ul { list-style: disc inside; color: var(--muted-text); font-size: 1.05rem; line-height: 1.7; padding-left: 0; }
-
-/* Small utility for red accents */
-.text-danger { color: var(--danger); font-weight: 600; }
-
-/* End of component-specific globals */
