@@ -3,5 +3,114 @@ import "../styles/layout/footer.css";
 ---
 
 <footer id="footer">
-    <p>&copy; 2025 Company Name. All rights reserved.</p>
+    <div class="footer">
+        <div class="company-info">
+            <h2>Bytes</h2>
+            <div class="copyright">&copy; 2025 Byttes. All rights reserved.</div>
+            <div class="socials">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="links">
+            <div class="col 1">
+                <h3>Column 1</h3>
+                <div class="col-content">
+                    <p>Link 1</p>
+                    <p>Link 2</p>
+                    <p>Link 3</p>
+                    <p>Link 4</p>
+                    <p>Link 5</p>
+                </div>
+            </div>
+            <div class="col 2">
+                <h3>Column 2</h3>
+                <div class="col-content">
+                    <p>Link 1</p>
+                    <p>Link 2</p>
+                    <p>Link 3</p>
+                    <p>Link 4</p>
+                    <p>Link 5</p>
+                </div>
+            </div>
+            <div class="col 3">
+                <h3>Column 3</h3>
+                <div class="col-content">
+                    <p>Link 1</p>
+                    <p>Link 2</p>
+                    <p>Link 3</p>
+                    <p>Link 4</p>
+                    <p>Link 5</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<style>
+    footer {
+        display: inline-flex;
+        height: 328px;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+        padding: 64px 165px;
+        align-items: flex-start;
+        gap: 125px;
+
+        & .company-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+
+            & h2 {
+
+            }
+
+            & .copyright {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            & .socials {
+                display: flex;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+
+        & .links {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+
+            & col {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+
+                & h3 {
+
+                }
+
+                & .col-content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 12px;
+                }
+            }
+        }
+    }
+</style>

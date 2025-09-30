@@ -2,14 +2,239 @@
 ---
 
 <section id="beneficios">
-    <div class="beneficios-card">
-        <h2>🎯 Beneficios para tu restaurante</h2>
-        <ul>
-            <li>Ahorra tiempo y dinero con procesos automatizados.</li>
-            <li>Reduce pérdidas por mal manejo de inventario.</li>
-            <li>Ofrece una mejor experiencia a tus clientes con un servicio más rápido.</li>
-            <li>Toma decisiones basadas en datos reales y en tiempo real.</li>
-            <li>Escala tu negocio fácilmente, sin importar si tienes una o varias sedes.</li>
-        </ul>
+    <div class="heading">
+        <div class="section-heading">
+            <h2>Estadisticas</h2>
+        </div>
+        <p>
+            Buscamos ofrecerte la mejor experiencia posible, y por eso nos enfocamos en
+        </p>
+    </div>
+    <div class="count">
+        <div class="row1">
+            <div class="1">
+                <img src="" alt="">
+                <div class="text">
+                    <p class="number">2,245,341</p>
+                    <p class="description">Usuarios activos</p>
+                </div>
+            </div>
+            <div class="2">
+                <img src="" alt="">
+                <div class="text">
+                    <p class="number">46,328</p>
+                    <p class="description">Clubs</p>
+                </div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="1">
+                <img src="" alt="">
+                <div class="text">
+                    <p class="number">828,867</p>
+                    <p class="description">Eventos organizados</p>
+                </div>
+            </div>
+            <div class="2">
+                <img src="" alt="">
+                <div class="text">
+                    <p class="number">1,926,436</p>
+                    <p class="description">Pagos</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+<style>
+    #beneficios {
+        display: flex;
+        width: 100%;
+        padding: 65px 144px;
+        justify-content: space-between;
+        align-items: center;
+
+        & .heading {
+            display: flex;
+            width: 540px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            flex-shrink: 0;
+
+            & .section-heading {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+
+                & h2 {
+                    color: var(--Acento, #E6AF2E);
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 44px;
+                }
+            }
+            & p {
+                color: var(--Text-Gray-900, #18191F);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; /* 150% */
+            }
+        }
+
+        & .count {
+            display: flex;
+            width: 540px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            flex-shrink: 0;
+
+            & .row1 {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                & .1 {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    & img {
+                        width: 48px;
+                        height: 48px;
+                    }
+
+                    & .text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        & .number {
+                            color: var(--Texto-Principal, #4A4A4A);
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 36px; /* 128.571% */
+                        }
+
+                        & .description {
+                            color: var(--Neutral-Grey, #717171);
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px; /* 150% */
+                        }
+                    }
+                }
+
+                & .2 {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    & img {
+                        width: 48px;
+                        height: 48px;
+                    }
+
+                    & .text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        & .number {
+                            color: var(--Texto-Principal, #4A4A4A);
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 36px; /* 128.571% */
+                        }
+
+                        & .description {
+                            color: var(--Neutral-Grey, #717171);
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px; /* 150% */
+                        }
+                    }
+                }
+            }
+            & .row2 {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                & .1 {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    & img {
+                        width: 48px;
+                        height: 48px;
+                    }
+
+                    & .text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        & .number {
+                            color: var(--Texto-Principal, #4A4A4A);
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 36px; /* 128.571% */
+                        }
+
+                        & .description {
+                            color: var(--Neutral-Grey, #717171);
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px; /* 150% */
+                        }
+                    }
+                }
+
+                & .2 {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    & img {
+                        width: 48px;
+                        height: 48px;
+                    }
+
+                    & .text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        & .number {
+                            color: var(--Texto-Principal, #4A4A4A);
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 36px; /* 128.571% */
+                        }
+
+                        & .description {
+                            color: var(--Neutral-Grey, #717171);
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px; /* 150% */
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>

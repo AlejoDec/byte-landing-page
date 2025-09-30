@@ -1,35 +1,42 @@
 #navbar {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
+    padding: 22px 120px 22px 148px;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #f0f0f0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 922px;
+    background: var(--Fondo, #FAF3E0);
+    width: 100%;
 
-    & img {
-        max-width: 100%;
-        height: auto;
+    & .title h1 {
+        color: var(--Principal, #581845);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 100% */
     }
 
-    & ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    & .buttons {
         display: flex;
-        gap: 1rem;
+        align-items: center;
+        gap: 16px;
+    }
 
-        & li {
-            margin: 0;
+    & .buttons .login {
+        display: flex;
+        padding: 10px 20px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        background: var(--Fondo, #FAF3E0);
+        color: #581845;
+    }
 
-            & a {
-                text-decoration: none;
-                color: #333;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
+    & .buttons .signup {
+        display: flex;
+        padding: 10px 20px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        background: var(--Principal, #581845);
     }
 }

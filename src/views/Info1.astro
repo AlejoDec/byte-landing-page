@@ -1,17 +1,16 @@
 ---
+import '../styles/views/info1.css';
+import Card from '../components/Cards.component.astro';
 ---
 
 <section id="info1">
-    <div class="info-card">
-        <h2>¿Por qué elegir Bytes?</h2>
-        <ul>
-            <li>Gestiona pedidos en tiempo real</li>
-            <li>Controla tu inventario de forma automática</li>
-            <li>Administra pagos sin complicaciones</li>
-            <li>Centraliza toda la información de tu negocio en un solo lugar</li>
-        </ul>
-        <p class="note">
-            Olvídate de las pérdidas por falta de control: con <b>Bytes</b> tu restaurante funciona como un sistema integrado, desde la cocina hasta la caja.
-        </p>
+    <div class="text">
+        <h2>¿Por que elegir Bytes?</h2>
+        <p>La solución integral para la gestión de tu restaurante.</p>
+    </div>
+    <div class="cards">
+        <Card Titulo="Fácil de usar" Logo="/icons/Facil.png" text="Interfaz intuitiva y amigable para una rápida adopción por parte de tu equipo." />
+        <Card Titulo="Gestión completa" Logo="/icons/Gestion.png" text="Control total sobre inventario, pedidos, mesas y más desde una sola plataforma." />
+        <Card Titulo="Análisis detallado" Logo="/icons/Analisis.png" text="Informes y estadísticas para tomar decisiones informadas y mejorar tu negocio." />
     </div>
 </section>

@@ -1,0 +1,54 @@
+---
+interface Props {
+    Titulo: string;
+    Logo: string;
+    text: string;
+}
+
+const { Titulo, Logo, text } = Astro.props as Props;
+---
+
+<div class="card-container">
+    <img src="{Logo}" alt="logo" class="card-logo" />
+    <h3>{Titulo}</h3>
+    <p>{text}</p>
+</div>
+
+<style>
+    .card-container {
+        display: flex;
+        width: 299px;
+        padding: 24px 32px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: var(--Fondo-secundario, #F4E2AA);
+        box-shadow: 0 2px 4px 0 rgba(171, 190, 209, 0.20);
+
+        & img {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
+        & h3 {
+            color: var(--Principal, #581845);
+            text-align: center;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px; /* 128.571% */
+        }
+
+        & p {
+            color: var(--Texto-Secundario, #7D7D7D);
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 142.857% */
+        }
+    }
+</style>
